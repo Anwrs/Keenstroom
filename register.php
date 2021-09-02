@@ -10,27 +10,19 @@ include 'backend/register/register_server.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="frontend/main.css">
-    <title>Register now</title>
+    <link rel="stylesheet" href="frontend/register.css">
+    <title>Register</title>
 </head>
 
-<body class="login">
-
-    <div class="btn-reg">
-        <a href="log-in.php">
-            <i class="fas fa-angle-left"></i>
-            LOGIN
-        </a>
+<body>
+    <div id="Return-btn">
+        <a href="log-in.php">LOGIN</a>
     </div>
-
     <div>
     <?php
     include 'backend/register/register_errors.php';
     ?>
     </div>
-
     <div>
     <?php
     if (isset($_POST['create'])) {
@@ -43,35 +35,15 @@ include 'backend/register/register_server.php';
     }
     ?>
     </div>
-
     <div class="register">
         <form class="form-reg" action="register.php" method="post">
-            <img src="images/logo/profile1.png" alt="logo">
-
-            <label for="name">Username</label>
             <input type="text" placeholder="Your username" name="username">
-
-            <label for="name">Email</label>
             <input type="text" placeholder="Your email" name="email">
-
-            <div class="gender">
-                <label for="gender">Gender</label>
-                <div>
-                    <input type="radio" id="bol" name="gender" value="female">Female
-                    <input type="radio" id="bol" name="gender" value="male">Male
-                </div>
-            </div>
-
-            <label for="password">Password</label>
             <input type="password" placeholder="Your password" name="password">
             <input type="password" placeholder="Confirm password" name="password_two">
-
             <button type="submit" name="create">Sign up !</button>
         </form>
 
     </div>
-
-
-    <script src="https://kit.fontawesome.com/82664ff85a.js" crossorigin="anonymous"></script>
 </body>
 </html>
